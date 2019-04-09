@@ -1,5 +1,8 @@
 :root {
     /* spalvos */
+    --color-primary: #E45447;
+    --color-secondary: #90ACD1;
+    --color-secondary-light: #F9F9FF;
 }
 
 body,
@@ -9,19 +12,113 @@ body * {
     vertical-align: top;
     box-sizing: border-box;
 }
+body {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body > * {
+    display: inline-block;
+    width: 100%;
+}
 
 /* container */
 
+.container {
+    display: inline-block;
+    width: 1200px;
+    margin-left: calc(50% - 600px);
+    padding: 30px 0;
+    float:left;
+
+}
 /* responsive */
+@media ( max-width: 1300px ) {
+    .container {
+    width: 740px;
+    margin-left: calc(50% - 370px);
+    }
+}
+@media ( max-width: 800px ) {
+    .container {
+    width: 480px;
+    margin-left: calc(50% - 240px);
+    font-size: 40px;
+    line-height: 40px;
+    }
+}
+@media ( max-width: 580px ) {
+    .container {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 20px;
+    }
+}
 
 /*block title all things  
 *title h2
 * line, line after
-* title center and title white
+*/
+.block-title{
+    display: inline-block;
+    width: 100%;
+
+}
+    .block-title > h2{
+        display: inline-block; 
+        width: 100%;
+        font-size: 48px;
+        line-height: 50px;
+    }
+    .block-title > .line{
+        display:inline-block;
+        margin-top: 20px;
+        height: 2px;
+        width: 10%;
+        min-width: 100px;
+        background-color: var(--color-primary);
+    }
+        .block-title > .line::after{
+            display: block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: inherit;
+            margin-top: -4px;
+        }
+
+
 
 
 /* color containers classes */
 
+.bg-blue {
+    background-color: var(--color-secondary);
+}
+.bg-grey {
+    background-color: var(--color-secondary-light);
+}
+.bg-red {
+    background-color: var(--color-primary);
+}
+
+/* center and color red for red bg*/
+
+    .bg-red.bg-red-text{
+        color:#FFF;
+    }
+   
+    .bg-red.text-center{
+        text-align: center;
+    }
+    .bg-red .block-title > .line{
+        background-color: #fff; 
+    }   
+        .bg-red .block-title > .line::after{
+                margin-left: calc( 100% / 2 - 5px);
+                background-color: inherit; 
+        }
 
 
 /* HEADER */
@@ -42,8 +139,67 @@ body * {
 
 /* STATISTICS and SERVICE OFFERS */
 
+.allCards{
+    width: 100%;
+    display: inline-block;
+}
+    .allCards > .card{
+        display:inline-block;
+        background-color: var(--color-secondary-light);
+        float:left;
+        margin-right: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
+        padding: 80px 20px;
+        width: calc( (100% - 3*20px) / 4 );
+        text-align: center;
+        border-radius: 5px;
+        height: 450px; 
+        transition: margin-top 0.5s;
+    }
+        .allCards > .card:last-child{
+            margin-right: 0;
+        }
+        .allCards > .card > .icon {
+            dislay: inline block;
+            font-size: 40px;
+            margin: 20px;
+            line-height: 40px;
+            border-radius: 20% 30% 40% 50%;
+            border: 2px solid var(--color-secondary);
+            padding: 20px;
+            animation: borderAnim 3s infinite;
+            animation-timing-function: linear;
+            background-color: #DFE6F4;
 
+        }
+        .allCards > .card > .number {
+            font-size:48px;
+            line-height:50px;
+            margin:20px;
+        }
+        .allCards > .card > .title {
+            font-size:20px;
+            line-height:30px;
+            margin: 20px;
+            text-transform: uppercase;
+        }
 
+        .allCards > .card:hover{
+            margin-top: -25px;
+        }
+
+    @keyframes borderAnim {
+        0%   {border-radius: 20% 30% 40% 50%;}
+        20%  {border-radius: 40% 20% 50% 30%;}
+        40%  {border-radius: 50% 40% 30% 20%;}
+        60% {border-radius: 30% 50% 20% 40%;}
+        80%   {border-radius: 25% 35% 45% 50%;}
+        100%   {border-radius: 20% 30% 40% 50%;}
+    }
+
+    
+    
+    
 /* SKILLS */
 
 
