@@ -42,6 +42,7 @@ document.getElementById('stats_cards').innerHTML = renderCards( statistics );
 
 /* FOOTER */
 
+document.getElementById('social').innerHTML = renderSocialIcon( icons );
 
 
 /* BACKT TO TOP */

@@ -63,6 +63,7 @@ var statistics = [
 
 /* FOOTER */
 
+var icons = ["facebook", "twitter", "dribbble", "behance"];
 
 
 /* BACKT TO TOP */

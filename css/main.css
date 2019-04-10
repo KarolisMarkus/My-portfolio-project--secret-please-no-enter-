@@ -3,6 +3,7 @@
     --color-primary: #E45447;
     --color-secondary: #90ACD1;
     --color-secondary-light: #F9F9FF;
+    
 }
 
 body,
@@ -43,8 +44,6 @@ body > * {
     .container {
     width: 480px;
     margin-left: calc(50% - 240px);
-    font-size: 40px;
-    line-height: 40px;
     }
 }
 @media ( max-width: 580px ) {
@@ -93,9 +92,9 @@ body > * {
 
 /* color containers classes */
 
-.bg-blue {
+/* .bg-blue {
     background-color: var(--color-secondary);
-}
+} */
 .bg-grey {
     background-color: var(--color-secondary-light);
 }
@@ -131,7 +130,19 @@ body > * {
 
 /* CLIENT LOGOS */
 
-
+#hero{
+    height: 100vh;
+    background: linear-gradient(to right, #fff 70%, var(--color-secondary) 30%);
+    position: relative;
+}
+    #hero img {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+    }
+    #hero .text-elements {
+        margin-top: calc(50vh - 100px);
+    }
 
 /* ABOUT MYSELF */
 
@@ -218,10 +229,72 @@ body > * {
 
 /* CONTACT ME */
 
+#contact_me p {
+    width: 50%;
+    margin: 40px 25%;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 10px;
+}
+.contacts {
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;  
+    font-size: 16px;
+    line-height: 20px;  
+
+}
+    .contacts > a {
+        width: 33%;
+        display: inline-block;
+        margin-right: 0;
+        font-size: 18px;
+        line-height: 20px;
+        float:left; 
+
+    }
+    .contacts:last-child { 
+        margin-right: 0; 
+    }
+    
+
 
 
 /* FOOTER */
 
+footer {
+    text-align: center;
+    color: #777;
+}
+h6 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 20px 0;
+        
+    }
+    #social {
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+        #social > .icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            line-height: 32px;
+            padding: 10px;
+            color: #CCCCCC;
+            transition: color 2s ease-out;
+            transition-delay: 0.5s;
+        }
+            #social > .icon:hover {
+                color: var(--color-primary);
+            }
 
+        footer p > a{
+            text-decoration: none;
+            color: var(--color-primary);
+        }
 
 /* BACKT TO TOP */
