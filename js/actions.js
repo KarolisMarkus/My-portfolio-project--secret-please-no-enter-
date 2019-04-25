@@ -48,10 +48,3 @@ document.getElementById('social').innerHTML = renderSocialIcon( icons );
 
 
 /* BACKT TO TOP */
-
-
-if (jQuery) {
-    alert("jquery is loaded");
-} else {
-    alert("Not loaded");
-}
