@@ -39,11 +39,50 @@ var statistics = [
         title: 'Happy clients'
     }
 ];
+var services = [
+    {
+        icon: 'diamond',
+        title: 'Web Design',
+        blablabla: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'bar-chart',
+        title: 'App Development',
+        blablabla: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'lightbulb-o ',
+        title: 'Web Development',
+        blablabla: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'tachometer',
+        title: 'Web Development',
+        blablabla: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    }
+];
 
 
 /* SKILLS */
 
-
+var skills = [
+    {
+        title: 'HTML5',
+        value: 85
+    },
+    {
+        title: 'CSS3',
+        value: 75
+    },
+    {
+        title: 'j-Query',
+        value: 90
+    },
+    {
+        title: 'Bootstrap',
+        value: 60
+    }
+];
 
 /* LATEST WORKS */
 

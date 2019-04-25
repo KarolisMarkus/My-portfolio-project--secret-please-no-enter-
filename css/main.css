@@ -92,9 +92,6 @@ body > * {
 
 /* color containers classes */
 
-/* .bg-blue {
-    background-color: var(--color-secondary);
-} */
 .bg-grey {
     background-color: var(--color-secondary-light);
 }
@@ -119,58 +116,140 @@ body > * {
                 background-color: inherit; 
         }
 
+.color-primary{
+    color: var(--color-primary);
+}
+.color-secondary{
+    color: var(--color-secondary);
+}
+
 
 /* HEADER */
 
- 
+  
 
 /* HERO */
 
-
-
-/* CLIENT LOGOS */
-
 #hero{
-    height: 100vh;
-    background: linear-gradient(to right, #fff 70%, var(--color-secondary) 30%);
     position: relative;
+} 
+.background-color-secondary{
+    background-color: var(--color-secondary);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(50% - 400px);
+    z-index: -1;
 }
+    #hero > .container{
+        padding-bottom: 0;
+    }
     #hero img {
-        position: absolute;
-        bottom: 0;
-        right: 10%;
+        display: inline-block;
+        float: right
+        /* width: 40%; */
     }
+        #hero img:hover {
+            transform: scaleX(-1);            
+        }
+    
     #hero .text-elements {
-        margin-top: calc(50vh - 100px);
+        margin-top: calc(50vh - 300px);
+        width: 40%;
     }
+        #hero .text-elements > .button-main{
+            margin-bottom:0; 
+
+        }
+        .mario {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #FFF;
+            background-color: var(--color-secondary);
+            padding: 20px;
+            border-radius: 10px 10px 0 10px;
+            position: relative;
+
+        }
+            .mario::after{
+                content: "";
+                position: absolute;
+                bottom: -20px;
+                right:0;
+                border-width: 20px 0 0 20px;
+                border-style: solid;
+                border-color: var(--color-secondary) transparent;
+
+            }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 50px;
+            line-height: 52px;
+        }
+        .text-elements > p {
+            color: #777;
+            font-size: 24px;
+            width: 75%;
+        }
+/* Clients logos */
 
 /* ABOUT MYSELF */
 
+#about_me{
+    display: inline-block;
+}
 
+    #about_me .left{
+        display: inline-block;
+        float:left;
+        width: 50%;
+        
+    }
 
-/* STATISTICS and SERVICE OFFERS */
+    #about_me .right{
+        display: inline-block;
+        float:right;
+        width: 50%;
+        padding: 30px 20px 0 20px;
+        margin-top: 50px;
+    }
+
+    #about_me .right >  .about-text{    
+            margin: 20px 0;
+        }
+        #about_me .right >  .about-text > p{    
+            margin-top: 10px;
+        }
+        
+    #about_me .righty{
+        margin-left: 20px;
+    }
+/* STATISTICS and SERVICE OFFERS */ 
 
 .allCards{
     width: 100%;
     display: inline-block;
 }
-    .allCards > .card{
+    .allCards  .card{
         display:inline-block;
         background-color: var(--color-secondary-light);
         float:left;
         margin-right: 20px;
         box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
-        padding: 80px 20px;
+        padding: 40px 20px;
         width: calc( (100% - 3*20px) / 4 );
         text-align: center;
         border-radius: 5px;
-        height: 450px; 
+        max-height: 340px; 
         transition: margin-top 0.5s;
+        animation: fadeInUp 0.5s 1;
+        animation-timing-function: ease-out;
     }
-        .allCards > .card:last-child{
+        .allCards  .card:last-child{
             margin-right: 0;
         }
-        .allCards > .card > .icon {
+        .allCards  .card > .icon {
             dislay: inline block;
             font-size: 40px;
             margin: 20px;
@@ -183,21 +262,28 @@ body > * {
             background-color: #DFE6F4;
 
         }
-        .allCards > .card > .number {
+        .allCards .card > .number {
             font-size:48px;
             line-height:50px;
             margin:20px;
         }
-        .allCards > .card > .title {
+        .allCards .card > .title {
             font-size:20px;
             line-height:30px;
             margin: 20px;
             text-transform: uppercase;
         }
+        .allCards .card > .text-bla {
+            font-size:12px;
+            list-style: height 20px;
+            margin: 20px;
+            text-transform: uppercase;
+        }
 
-        .allCards > .card:hover{
+        .allCards .moving-card:hover{
             margin-top: -25px;
         }
+
 
     @keyframes borderAnim {
         0%   {border-radius: 20% 30% 40% 50%;}
@@ -208,18 +294,123 @@ body > * {
         100%   {border-radius: 20% 30% 40% 50%;}
     }
 
+    @keyframes fadeInUp {
+    from {
+        transform: translate3d(0,300px,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
     
     
     
 /* SKILLS */
+#skills {
+    display: inline-block;
+}
+    #skills  .left {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        padding: 0 20px 20px 20px;
+        margin: 30px 0;
+        margin-top: 50px;
+    }
+    #skills  .left > p{
+        margin-top: 20px;
+    }
 
+    #skills_bars {
+        display: inline-block;
+        float: right;
+        width: 50%;
+    }
+.progress-bar {
+    display: inline-block;
+    width: 100%;
+}
+    .progress-bar > .title {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 20px;
+        margin-bottom: 10px;
+        float:left;
+    }
+    .progress-bar > .bar {
+        display: inline-block;
+        float:left;
+        width: 100%;
+        height: 20px;
+        border: 1px solid #e0e0e0;
+        background: transparent;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+    }
+        .progress-bar > .bar > .value {
+             display: inline-block;
+            width: 100%;
+            height: 10px;
+            float: left;
+            background-color: #FFF;
 
+        }
+        .progress-bar > .bar > .value > .loading-part {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            animation-name: progress_bar_loading;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+            .progress-bar > .bar > .value > .loading-part > .vertical-line {
+                width: 1px;
+                height: 27px;
+                float: right;
+                margin-top: -6px;
+                background: var(--color-secondary);
+            }
+            .progress-bar > .bar > .value > .loading-part > .text-value {
+                display: inline-block;
+                font-weight: bold;
+                float: right;
+                padding-top: 12px;
+                padding-right: 5px;
+                font-size: 14px;
+            }
+
+@keyframes progress_bar_loading {
+0% {
+width: 0%;
+}
+100% {
+width: 100%;
+}
+}
 
 /* LATEST WORKS */
 
 
 
 /* JOB HISTORY */
+
+
+/* Service offers */
+
+        #service_offers p {
+            width: 50%;
+            margin-top: 20px;
+        }
+        
+        #offerings {
+            margin-top: 40px;
+        } 
 
 
 
@@ -245,6 +436,8 @@ body > * {
 
 }
     .contacts > a {
+        text-decoration: none;
+        color: #fff;
         width: 33%;
         display: inline-block;
         margin-right: 0;

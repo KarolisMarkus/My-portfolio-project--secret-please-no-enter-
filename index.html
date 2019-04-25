@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,14 +17,15 @@
     <header class="headeros">Labas aš esu galvinis</header>
     <!-- Hero element -->
 
-    <div id="hero" class="bg-blue">
+    <div id="hero">
+        <div class="background-color-secondary"></div>
         <div class="container">
             <img src="img/banner_img.png" alt="To the right">
             <div class="text-elements">
                 <div class="mario">It's a Me</div>
                 <h1>Kamreem EzZat</h1>
-                <p>Senio Creative Designer and Content Developer</p>
-                <div class="button-main">Hire me</div>  
+                <p>Senior Creative <span class="color-primary">Designer</span> and Content <span class="color-secondary">Developer</span></p>
+                <div class="button-main">pliz Hire me</div>  
             </div>
             
         </div>
@@ -54,7 +55,7 @@
                 </div> 
                 <div class="button-block">
                     <div class="button-main button-white">More info</div>
-                    <div class="button-main">Resume</div>
+                    <div class="button-main righty">Resume</div>
                 </div>  
             </div>    
         </div>
@@ -69,21 +70,6 @@
                     <div class="icon fa fa-archive"></div>
                     <div class="number">245</div>
                     <div class="title">Total projects</div>
-                </div>
-                <div class="card">
-                    <div class="icon fa fa-archive"></div>
-                    <div class="number">245</div>
-                    <div class="title">Total projects</div>
-                </div>
-                <div class="card">
-                    <div class="icon fa fa-archive"></div>
-                    <div class="number">245</div>
-                    <div class="title">Total projects</div>
-                </div>
-                <div class="card last-card">
-                    <div class="icon fa fa-archive"></div>
-                    <div class="number">245</div>
-                    <div class="title">Total projects</div>
                 </div> -->
             </div>
         </div>
@@ -92,9 +78,25 @@
     <!-- Skills lists cards -->
     <div id="skills">
         <div class="container">
-            <div class="block-title">
-                    <h2>I got the skills</h2>
-                    <div class="line"></div>
+            <div class="left">
+                <div class="block-title">
+                        <h2>I got the skills</h2>
+                        <div class="line"></div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo labore nostrum ex optio eveniet voluptas? Ipsum voluptas consequatur totam atque.</p>
+            </div>
+            <div id="skills_bars" >
+                <!-- <div class="progress-bar">
+                    <div class="title">HTML5</div>
+                    <div class="bar">
+                        <div class="value" style="width: 85%;">
+                            <div class="loading-part">
+                                <div class="vertical-line"></div>
+                                <div class="text-value">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -130,7 +132,10 @@
                 <h2>Service offers</h2>
                 <div class="line"></div>
             </div>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <div id="offerings" class="allCards"></div>
         </div>
+
     </div>
 
     <!-- Testimonials with scrolls  -->
@@ -150,9 +155,9 @@
             </div>
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. some for as low as $.17 each</p>
             <div class="contacts">
-                <a class="phone">+37068880163</a>
+                <a class="phone" href="tel:1-562-867-5309">+37068880163</a>
                 <a class="email" href="mailto:someone@example.com?Subject=Hello%20again" target="_top">karolis.markuskis@gmail.com</a>
-                <a class="webpage" >https://www.webpage.com</a>
+                <a class="webpage" href="#" >https://www.webpage.com</a>
             </div>
             <div class="hireMe button-main button-white">Hire Me</div>
         </div>
@@ -181,6 +186,7 @@
     </div>
 
     <script src="js/data.js"></script>
+    <script src="js/jQuery.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/actions.js"></script>
 </body>
