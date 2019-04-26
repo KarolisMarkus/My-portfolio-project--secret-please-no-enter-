@@ -1,8 +1,8 @@
 "use strict";
 
 /* HEADER */
-
-
+var header = document.getElementById("header");
+var sticky = header.offsetTop;
 
 /* HERO */
 
@@ -90,6 +90,34 @@ var skills = [
 
 /* JOB HISTORY */
 
+var jobs = [
+    {
+        position: 'Quality assurance specialist',
+        place: '"UAB Teamworx LT", Vilnius Lithuania',
+        start_date: '2015-04-23',
+        end_date: '2016-08-01',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse rem facilis alias libero ullam amet aliquid ratione laudantium. Ipsa, reiciendis?',
+    },
+    {
+        position: 'Warehouse manager',
+        place: '"UAB Teamworx LT", Vilnius Lithuania',
+        start_date: '2016-01-01',
+        end_date: '2019-04-06',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse rem facilis alias libero ullam amet aliquid ratione laudantium. Ipsa, reiciendis?',
+    },{
+        position: 'Customer support',
+        place: '"UAB Teamworx LT", Vilnius Lithuania',
+        start_date: '2016-08-01',
+        end_date: '2019-04-06',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse rem facilis alias libero ullam amet aliquid ratione laudantium. Ipsa, reiciendis?',
+    },{
+        position: 'Sudent of JAVA programming',
+        place: 'Baltic Talents, Vilnius Lithuania',
+        start_date: '2019-04-18',
+        end_date: '',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse rem facilis alias libero ullam amet aliquid ratione laudantium. Ipsa, reiciendis?',
+    }
+]
 
 
 /* TESTIMONIALS */

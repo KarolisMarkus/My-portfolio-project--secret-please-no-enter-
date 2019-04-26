@@ -3,6 +3,8 @@
     --color-primary: #E45447;
     --color-secondary: #90ACD1;
     --color-secondary-light: #F9F9FF;
+    --color-black: #222;
+
     
 }
 
@@ -125,9 +127,74 @@ body > * {
 
 
 /* HEADER */
+body {
+    position: relative;
+}
+body > header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
 
-  
+#header  > .container {
+    padding: 10px 0;
+    position: relative;
+}
+    header > .container > .logo {
+        float: left;
+    }
+    header > .container > .hamburger {
+        display: inline-block;
+        float: right;
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+        header > .container > .hamburger > span{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-black);
+            border-radius: 5px;
+            margin: 15px 0;
+            transition: ease-in-out .25s;
+        }
+        header > .container > .hamburger > span:nth-child(1){
+            top: 0;
+        }
+        header > .container > .hamburger > span:nth-child(2){
+            top: 12.5px;
+        }
+        header > .container > .hamburger > span:nth-child(3){
+            top:25px;
+        }
+        #header .open > span:nth-child(1) {
+            transform: rotate(135deg);
+            top: 12px;
+        }
+        #header .open > span:nth-child(2) {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        #header .open > span:nth-child(3) {
+            transform: rotate(-135deg);
+            top: 12px;
+        }
 
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 0 4px var(--color-black);
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
 /* HERO */
 
 #hero{

@@ -1,8 +1,11 @@
 "use strict";
 
 /* HEADER */
+window.onscroll = function() {stickToTop()};
 
-
+$('#header .hamburger').click(function(){
+    $(this).toggleClass('open');
+});
 
 /* HERO */
 
